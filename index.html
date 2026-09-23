@@ -4,379 +4,1118 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <title>Koshal Kumar | Data Scientist @ Kraft Heinz | Machine Learning & Price Optimization</title>
+    <meta
+      name="description"
+      content="Portfolio of Koshal Kumar, Data Scientist at Kraft Heinz India GCC specializing in Retail Price Optimization, Demand Elasticity Forecasting, and Enterprise Machine Learning with ~5 years of experience."
+    />
+    <meta name="author" content="Koshal Kumar" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css?v=20260923b" />
+    <link rel="stylesheet" href="mediaqueries.css?v=20260923b" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Koshal Kumar</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Koshal Kumar</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Koshal Kumar profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Koshal Kumar</h1>
-        <p class="section__text__p2">Data Scientist</p>
-        <div class="btn-container">
+    <!-- Header / Navigation -->
+    <header>
+      <div class="container nav-container">
+        <a href="#hero" class="nav-brand" aria-label="Koshal Kumar Home">
+          <span class="nav-brand-badge">K</span>
+          <span>Koshal<span class="text-cyan">.ai</span></span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav aria-label="Primary Navigation">
+          <ul class="nav-links">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Toggle -->
+        <div class="nav-actions">
           <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/Koshal Kumar Data Scientist.pdf')"
+            class="hamburger-btn"
+            id="hamburger-btn"
+            aria-label="Toggle Navigation Menu"
+            aria-expanded="false"
           >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
+            <div class="hamburger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </button>
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/koshalsingh/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/koshalsingh'"
-          />
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#experience" class="mobile-nav-link">Experience</a>
+      <a href="#skills" class="mobile-nav-link">Skills</a>
+      <a href="#projects" class="mobile-nav-link">Projects</a>
+      <a href="#education" class="mobile-nav-link">Education</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+      <a
+        href="./assets/Koshal%20Kumar%20Resume%20Latest.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-primary"
+        id="mobile-resume-btn"
+        style="width: 100%; text-align: center; margin-top: 1rem"
+      >
+        📄 Download Latest Resume
+      </a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-status-pill">
+            <span class="pulse-dot"></span>
+            <span>Data Scientist @ Kraft Heinz India GCC</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="text-gradient">Koshal Kumar</span>
+          </h1>
+
+          <div class="hero-role-badge">
+            Machine Learning • Price Optimization • Distributed Data
+          </div>
+
+          <p class="hero-bio">
+            Data Scientist with <strong>~5 years of experience</strong> in automation, data modelling, and price optimization.
+            Specialized in deploying revenue forecasting algorithms leveraging price elasticity of demand and delivering
+            <strong>8x–10x model efficiency gains</strong> across global FMCG & CPG markets.
+          </p>
+
+          <div class="hero-cta-group">
+            <a
+              href="./assets/Koshal%20Kumar%20Resume%20Latest.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              id="hero-download-cv-btn"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download CV</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Get in Touch</span>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a
+              href="https://www.linkedin.com/in/koshalsingh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              aria-label="LinkedIn Profile"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/koshalsingh"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              aria-label="GitHub Profile"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+            </a>
+            <a
+              href="mailto:koshalsingh0921@gmail.com"
+              class="social-link"
+              aria-label="Send Email"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Avatar Visual with Orbiting Badges -->
+        <div class="hero-visual">
+          <div class="hero-avatar-wrapper">
+            <div class="avatar-halo"></div>
+            <div class="avatar-frame">
+              <img
+                src="./assets/profile-pic.png"
+                alt="Koshal Kumar"
+                class="avatar-img"
+              />
+            </div>
+
+            <!-- Floating Badge Top Right -->
+            <div class="floating-badge badge-top-right">
+              <span class="badge-icon">⚡</span>
+              <div>
+                <div class="badge-value">8x–10x</div>
+                <div class="badge-label">Model Efficiency</div>
+              </div>
+            </div>
+
+            <!-- Floating Badge Bottom Left -->
+            <div class="floating-badge badge-bottom-left">
+              <span class="badge-icon">🚀</span>
+              <div>
+                <div class="badge-value">~5 Years</div>
+                <div class="badge-label">DS & ML Experience</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
+
+    <!-- Impact Metrics Banner -->
+    <section id="metrics">
+      <div class="container">
+        <div class="metrics-wrapper">
+          <div class="metric-item">
+            <div class="metric-number">~5 Yrs</div>
+            <div class="metric-desc">Data Science, Automation & Machine Learning</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">8x–10x</div>
+            <div class="metric-desc">Enhanced Model Efficiency in Pricing Engine</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">40%</div>
+            <div class="metric-desc">Time Savings in Global GCC Industrialization</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">93%</div>
+            <div class="metric-desc">Accuracy on FaceNet Facial Recognition Tasks</div>
+          </div>
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">About Me</div>
+          <h2 class="section-title">Bridging Data Science & Business Value</h2>
+          <p class="section-desc">
+            Proven track record in building algorithmic pricing solutions, scalable data architectures, and high-impact machine learning systems.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-summary-card">
+            <h3 style="font-size: 1.35rem; margin-bottom: 1rem; color: #fff">Professional Background</h3>
+            <p class="about-paragraph">
+              I am a <strong>Data Scientist</strong> with approx <strong>~5 years of experience</strong> across
+              automation, data modelling, inferential statistics, and machine learning package development.
+              I have led impactful initiatives across the <strong>CPG, Retail, and Insurance</strong> sectors.
+            </p>
+            <p class="about-paragraph">
+              My core specialty lies in <strong>Price Optimization and Demand Elasticity</strong>: formulating mathematical
+              loss-minimization frameworks, managing real-world market constraints, and crafting intuitive simulation
+              tools that empower leadership to make decisive, revenue-maximizing pricing adjustments.
+            </p>
+            <div class="about-highlight-box">
+              🎯 <strong>Mission:</strong> Leveraging quantitative rigor, machine learning, and scalable cloud engineering
+              to solve complex business challenges with measurable commercial outcomes.
             </div>
           </div>
-          <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
+
+          <div class="about-pillars">
+            <div class="pillar-card">
+              <div class="pillar-icon">📈</div>
+              <div class="pillar-content">
+                <h3>Price Optimization & Econometrics</h3>
+                <p>
+                  Building store- and item-level pricing engines using price elasticity of demand to forecast revenue and maximize net margin while maintaining market share.
+                </p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">⚡</div>
+              <div class="pillar-content">
+                <h3>Scalable Machine Learning & GCC Deployment</h3>
+                <p>
+                  End-to-end industrialization of ML models across US and Brazil markets, reducing execution cycles by 40% and boosting pipeline throughput.
+                </p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">🌐</div>
+              <div class="pillar-content">
+                <h3>Big Data & Distributed Cloud ETL</h3>
+                <p>
+                  Designing automated data cleaning and quality control pipelines with Databricks, PySpark, and Azure to harmonize multi-retailer EAN datasets.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Career History</div>
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-desc">
+            Hands-on journey driving commercial analytics and AI solutions across industry-leading organizations.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <!-- Item 1: Kraft Heinz -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Data Scientist</h3>
+                  <div class="timeline-company">Kraft Heinz India GCC</div>
+                </div>
+                <div class="timeline-badge badge-current">May 2025 – Present</div>
+              </div>
+              <div class="timeline-focus">Price Optimization & Algorithm Development</div>
+              <ul class="timeline-bullets">
+                <li>
+                  Implemented <strong>Machine Learning models</strong> to understand the impact of pricing and promotions on sales, providing recommendations on optimal strategy across multiple product categories to balance market share and profitability.
+                </li>
+                <li>
+                  Deployed <strong>End-to-End industrialization for 2 major categories in Brazil</strong> and currently delivering <strong>2+ categories in the US market with 40%-time efficiency</strong>.
+                </li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">Price Optimization</span>
+                <span class="tech-tag">Algorithm Development</span>
+                <span class="tech-tag">CPG Analytics</span>
+                <span class="tech-tag">E2E Industrialization</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Tiger Analytics - Data Scientist -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Data Scientist</h3>
+                  <div class="timeline-company">Tiger Analytics</div>
+                </div>
+                <div class="timeline-badge">July 2024 – May 2025</div>
+              </div>
+              <div class="timeline-focus">Price Optimization & Algorithm Development</div>
+              <ul class="timeline-bullets">
+                <li>
+                  <strong>Objective:</strong> Spearheaded a comprehensive retail price optimization project developing strategic pricing to maximize profit and sales considering competition, customer elasticity, and market trends.
+                </li>
+                <li>
+                  <strong>Algorithm Development:</strong> Developed an algorithmic forecasting engine leveraging <strong>price elasticity of demand</strong> for accurate revenue projections.
+                </li>
+                <li>
+                  <strong>Model Deployment & Constraints:</strong> Deployed loss minimization and mathematical optimization techniques; created specialized methods to address infeasible solutions and boundary constraints.
+                </li>
+                <li>
+                  <strong>Granular Pricing Engine:</strong> Built a pricing engine capable of computing optimal prices at <strong>store- and item-level granularity</strong>, balancing net sales and net margin against cost, inventory, and promotions.
+                </li>
+                <li>
+                  <strong>Simulation Tool Creation:</strong> Engineered an interactive simulation dashboard allowing business executives to simulate price changes on key KPIs (net sales, margins, revenue).
+                </li>
+                <li>
+                  <strong>Key Achievement:</strong> <strong>Enhanced model efficiency by 8x–10x</strong>, enabling actionable, real-time insights with high-precision margin forecasts.
+                </li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">PySpark</span>
+                <span class="tech-tag">Price Elasticity</span>
+                <span class="tech-tag">Loss Minimization</span>
+                <span class="tech-tag">Revenue Forecasting</span>
+                <span class="tech-tag">Simulation Tool</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Tiger Analytics - Senior Analyst -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Senior Analyst</h3>
+                  <div class="timeline-company">Tiger Analytics</div>
+                </div>
+                <div class="timeline-badge">March 2022 – June 2024</div>
+              </div>
+              <div class="timeline-focus">Dashboard Data & Distributed Big Data Pipelines</div>
+              <ul class="timeline-bullets">
+                <li>
+                  Developed automated data cleaning pipelines for diverse retail datasets using <strong>Databricks</strong>, ensuring continuous data integrity and processing consistency.
+                </li>
+                <li>
+                  Implemented rigorous <strong>quality control measures</strong> at every stage of the ETL pipeline to guarantee data completeness and reliability.
+                </li>
+                <li>
+                  Standardized disparate data formats across all retail chains by mapping records to a universal <strong>EAN (European Article Number)</strong> taxonomy.
+                </li>
+                <li>
+                  Orchestrated data consolidation and downstream transfer to <strong>SQL Pipelines</strong>, significantly accelerating subsequent downstream analytics and BI dashboards.
+                </li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">Databricks</span>
+                <span class="tech-tag">PySpark</span>
+                <span class="tech-tag">SQL Pipeline</span>
+                <span class="tech-tag">EAN Mapping</span>
+                <span class="tech-tag">Data Quality Control</span>
+                <span class="tech-tag">ETL Automation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Alunoz Technologies -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Associate Data Scientist</h3>
+                  <div class="timeline-company">Alunoz Technologies</div>
+                </div>
+                <div class="timeline-badge">Nov 2021 – Feb 2022</div>
+              </div>
+              <div class="timeline-focus">Facial Recognition via One-Shot Learning (11/2021 – 12/2021)</div>
+              <ul class="timeline-bullets">
+                <li>
+                  Developed an advanced facial recognition system utilizing the <strong>FaceNet architecture</strong> integrated within <strong>OpenCV</strong>.
+                </li>
+                <li>
+                  Implemented <strong>DeepFace</strong> for efficient feature vector extraction and real-time facial comparison.
+                </li>
+                <li>
+                  Achieved an impressive <strong>93% accuracy rate</strong> in one-shot facial recognition tasks, establishing state-of-the-art computer vision capabilities.
+                </li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">FaceNet</span>
+                <span class="tech-tag">DeepFace</span>
+                <span class="tech-tag">Computer Vision</span>
+                <span class="tech-tag">One-Shot Learning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Matrix Section -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Technical Arsenal</div>
+          <h2 class="section-title">Skills & Capabilities</h2>
+          <p class="section-desc">
+            A comprehensive stack spanning statistical modeling, enterprise AI frameworks, and distributed cloud computing.
+          </p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="skills-filter">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="ml">Machine Learning & AI</button>
+          <button class="filter-btn" data-filter="cloud">Big Data & Cloud</button>
+          <button class="filter-btn" data-filter="programming">Languages & Frameworks</button>
+          <button class="filter-btn" data-filter="analytics">Domain & Econometrics</button>
+        </div>
+
+        <div class="skills-grid">
+          <!-- ML & AI Category -->
+          <div class="skill-category-card" data-category="ml">
+            <div class="category-header">
+              <span class="category-icon">🧠</span>
+              <h3 class="category-title">Machine Learning & AI</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Regression & Classification</span>
+                  <span class="skill-level">95%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="95%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Loss Minimization & Optimization</span>
+                  <span class="skill-level">92%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="92%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Natural Language Processing (NLP)</span>
+                  <span class="skill-level">88%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="88%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Computer Vision (OpenCV, DeepFace)</span>
+                  <span class="skill-level">85%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="85%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Big Data & Cloud Category -->
+          <div class="skill-category-card" data-category="cloud">
+            <div class="category-header">
+              <span class="category-icon">☁️</span>
+              <h3 class="category-title">Big Data & Cloud</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Databricks</span>
+                  <span class="skill-level">92%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="92%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">PySpark Distributed Processing</span>
+                  <span class="skill-level">90%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Azure Cloud Ecosystem</span>
+                  <span class="skill-level">86%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="86%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">SQL Pipelines & Data Warehousing</span>
+                  <span class="skill-level">94%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="94%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Languages & Frameworks -->
+          <div class="skill-category-card" data-category="programming">
+            <div class="category-header">
+              <span class="category-icon">⚡</span>
+              <h3 class="category-title">Languages & Frameworks</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Python (Advanced)</span>
+                  <span class="skill-level">96%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="96%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">SQL</span>
+                  <span class="skill-level">92%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="92%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">MLflow & Experiment Tracking</span>
+                  <span class="skill-level">85%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Django & API Development</span>
+                  <span class="skill-level">82%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="82%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Domain & Econometrics -->
+          <div class="skill-category-card" data-category="analytics">
+            <div class="category-header">
+              <span class="category-icon">📊</span>
+              <h3 class="category-title">Domain & Analytics</h3>
+            </div>
+            <div class="skill-items-list">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Price Elasticity & Demand Forecasting</span>
+                  <span class="skill-level">95%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="95%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">CPG & Retail Economics</span>
+                  <span class="skill-level">92%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="92%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Inferential Statistics & Modeling</span>
+                  <span class="skill-level">90%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Critical & Value Thinking</span>
+                  <span class="skill-level">95%</span>
+                </div>
+                <div class="skill-bar"><div class="skill-bar-fill" data-width="95%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Applied Work</div>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-desc">
+            Production-grade systems delivering business impact through data modeling, optimization, and AI.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Retail Price Optimization -->
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <img
+                src="./assets/project-pricing.jpg"
+                alt="Retail Price Optimization Engine"
+                class="project-img"
+              />
+              <span class="project-category-tag">Retail Analytics / Econometrics</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Retail Price Optimization & Demand Elasticity Engine</h3>
+              <p class="project-desc">
+                High-performance pricing engine computing optimal prices at store- and item-level granularity. Models the price elasticity curve to forecast revenue, maximize net margins, and account for competitive and inventory constraints.
+              </p>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <span class="icon">✓</span>
+                  <span><strong>8x–10x model efficiency boost</strong> through vectorized optimization algorithms.</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="icon">✓</span>
+                  <span>Executive simulation tool for scenario analysis on net sales and margins.</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <div class="tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">PySpark</span>
+                  <span class="tech-tag">Optimization</span>
+                  <span class="tech-tag">Regression</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: RAG Pipeline -->
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <img
+                src="./assets/project-rag.jpg"
+                alt="Intelligent Document Retrieval & RAG Pipeline"
+                class="project-img"
+              />
+              <span class="project-category-tag">Generative AI / LLMs</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Intelligent Document Retrieval & RAG Pipeline</h3>
+              <p class="project-desc">
+                Enterprise-grade Retrieval-Augmented Generation (RAG) system with semantic chunking, high-density vector search, and localized LLM inference for precise document synthesis without hallucinations.
+              </p>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <span class="icon">✓</span>
+                  <span>Semantic indexing with FAISS and HuggingFace dense embeddings.</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="icon">✓</span>
+                  <span>Integrated Ollama LLM for grounded contextual responses and citations.</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <div class="tech-tags">
+                  <span class="tech-tag">LangChain</span>
+                  <span class="tech-tag">FAISS</span>
+                  <span class="tech-tag">Hugging Face</span>
+                  <span class="tech-tag">Ollama LLM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Facial Recognition -->
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <img
+                src="./assets/project-cv.jpg"
+                alt="One-Shot Facial Recognition"
+                class="project-img"
+              />
+              <span class="project-category-tag">Computer Vision / Biometrics</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">One-Shot Facial Recognition System</h3>
+              <p class="project-desc">
+                Biometric authentication solution leveraging FaceNet deep architecture and DeepFace feature extraction for one-shot identity verification and comparison.
+              </p>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <span class="icon">✓</span>
+                  <span><strong>93% verification accuracy</strong> achieved on diverse camera angles and lighting.</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="icon">✓</span>
+                  <span>Real-time face detection and feature vector comparison pipeline.</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <div class="tech-tags">
+                  <span class="tech-tag">OpenCV</span>
+                  <span class="tech-tag">FaceNet</span>
+                  <span class="tech-tag">DeepFace</span>
+                  <span class="tech-tag">Python</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Databricks Pipeline -->
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <img
+                src="./assets/project-databricks.jpg"
+                alt="Distributed Retail Data Pipeline"
+                class="project-img"
+              />
+              <span class="project-category-tag">Big Data & Cloud Engineering</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Distributed Retail Data Cleaning & EAN Pipeline</h3>
+              <p class="project-desc">
+                Multi-tenant data ingestion and quality-control pipeline deployed on Databricks to clean, standardize, and map disparate retailer datasets onto a unified EAN schema.
+              </p>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <span class="icon">✓</span>
+                  <span>Automated multi-stage validation ensuring end-to-end data integrity.</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="icon">✓</span>
+                  <span>Consolidated data streaming directly into production SQL pipelines.</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <div class="tech-tags">
+                  <span class="tech-tag">Databricks</span>
+                  <span class="tech-tag">PySpark</span>
+                  <span class="tech-tag">SQL</span>
+                  <span class="tech-tag">Azure</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal Projects Section -->
+    <section id="personal-projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Personal Builds</div>
+          <h2 class="section-title">Personal Projects</h2>
+          <p class="section-desc">
+            Self-driven explorations in Generative AI, NLP, and emerging technologies — built, deployed, and open-sourced.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Personal Project 1: Deep Research AI Agent -->
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <img
+                src="./assets/project-deep-research.png"
+                alt="Deep Research AI Agent"
+                class="project-img"
+              />
+              <span class="project-category-tag">Generative AI / Multi-Agent</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Deep Research AI Agent</h3>
+              <p class="project-desc">
+                Multi-agent research application that plans web searches, executes parallel research across sources, synthesizes findings into structured Markdown reports, and delivers results via email — all through an interactive Gradio web interface.
+              </p>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <span class="icon">✓</span>
+                  <span>Multi-agent orchestration with <strong>OpenAI Agents SDK</strong> for parallel web research.</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="icon">✓</span>
+                  <span>Auto-generates structured Markdown reports with email delivery pipeline.</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <div class="tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">OpenAI Agents SDK</span>
+                  <span class="tech-tag">Gradio</span>
+                  <span class="tech-tag">Multi-Agent</span>
+                </div>
+                <div style="display: flex; gap: 0.75rem;">
+                  <a
+                    href="https://deep-research-gd7t.onrender.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary btn-sm"
+                  >
+                    Live Demo
+                  </a>
+                  <a
+                    href="https://github.com/koshalsingh/deep_research/tree/main"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-secondary btn-sm"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Personal Project 2: Quora Duplicate Detection -->
+          <div class="project-card">
+            <div class="project-img-wrapper">
+              <img
+                src="./assets/project-cv.jpg"
+                alt="Quora Duplicate Question Detection"
+                class="project-img"
+              />
+              <span class="project-category-tag">NLP / Semantic Similarity</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Duplicate Question Detection — Quora</h3>
+              <p class="project-desc">
+                Built a model to identify duplicate questions on Quora using TF-IDF, Word2Vec, Cosine similarity, and Jaccard similarity for feature engineering, improving answer efficiency and reducing redundancy.
+              </p>
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <span class="icon">✓</span>
+                  <span><strong>98% accuracy</strong> in identifying semantically duplicate questions.</span>
+                </div>
+                <div class="highlight-item">
+                  <span class="icon">✓</span>
+                  <span>Multi-feature NLP pipeline with TF-IDF, Word2Vec, and similarity metrics.</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <div class="tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">NLP</span>
+                  <span class="tech-tag">TF-IDF</span>
+                  <span class="tech-tag">Word2Vec</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Academic Foundation</div>
+          <h2 class="section-title">Education & Certifications</h2>
+          <p class="section-desc">
+            Formal degrees in Computer Science and Data Science supplemented with specialized domain credentials.
+          </p>
+        </div>
+
+        <!-- Academic Degrees Row -->
+        <div class="edu-section-label edu-section-first">
+          <span>&#127979;</span> Academic Degrees
+        </div>
+        <div class="edu-row" style="margin-bottom: 3.5rem;">
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <h4 class="edu-degree">Master in Data Science &amp; Big Data</h4>
+              <span class="edu-year">2019 – 2021</span>
+            </div>
+            <div class="edu-institution">Central University of Rajasthan</div>
+            <p class="edu-notes">
+              Comprehensive coursework covering big data architectures, machine learning algorithms, inferential statistics, and distributed compute systems.
+            </p>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <h4 class="edu-degree">Bachelor of Science in Computer Science</h4>
+              <span class="edu-year">2016 – 2019</span>
+            </div>
+            <div class="edu-institution">Magadh University</div>
+            <p class="edu-notes">
+              Rigorous core training in algorithms, data structures, discrete mathematics, object-oriented programming, and relational database systems.
+            </p>
+          </div>
+        </div>
+
+        <!-- Professional Certifications Row -->
+        <div class="edu-section-label edu-certs-label" style="margin-top: 3.5rem; margin-bottom: 1.5rem;">
+          <span>&#128220;</span> Professional Certifications
+        </div>
+        <div class="edu-row edu-row-certs">
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <h4 class="edu-degree">CPG Domain Certification</h4>
+              <span class="edu-year">Tiger Analytics</span>
+            </div>
+            <div class="edu-institution">Consumer Packaged Goods Analytics</div>
+            <p class="edu-notes">
+              Deep specialization in retail pricing mechanics, trade promotions, FMCG supply chain dynamics, and elasticity modeling.
+            </p>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <h4 class="edu-degree">Insurance Domain Certification</h4>
+              <span class="edu-year">Tiger Analytics</span>
+            </div>
+            <div class="edu-institution">Insurance Risk &amp; Pricing Analytics</div>
+            <p class="edu-notes">
+              Actuarial data modeling, claims loss distributions, customer retention scoring, and regulatory constraint modeling.
+            </p>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <h4 class="edu-degree">Applied NLP</h4>
+              <span class="edu-year">NPTEL</span>
+            </div>
+            <div class="edu-institution">National Programme on Technology Enhanced Learning</div>
+            <p class="edu-notes">
+              Advanced text mining, embedding representations, sequence modeling, and language understanding architectures.
+            </p>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <h4 class="edu-degree">Deep Learning</h4>
+              <span class="edu-year">NPTEL</span>
+            </div>
+            <div class="edu-institution">National Programme on Technology Enhanced Learning</div>
+            <p class="edu-notes">
+              Rigorous foundational deep learning covering CNNs (ResNet, VGG), RNNs/LSTMs, Optimization (Adam, RMSProp), Autoencoders, and Attention Mechanisms.
+            </p>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-card-header">
+              <h4 class="edu-degree">Data Structure Certification</h4>
+              <span class="edu-year">CDAC</span>
+            </div>
+            <div class="edu-institution">Centre for Development of Advanced Computing</div>
+            <p class="edu-notes">
+              Advanced data structures, algorithmic complexity optimization, and memory-efficient data representation.
             </p>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
     </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
+
+    <!-- Contact Section -->
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Let's Connect</div>
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="section-desc">
+            Open for technical leadership, pricing & data science strategy, or machine learning engineering discussions.
+          </p>
         </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+
+        <div class="contact-wrapper">
+          <!-- Email Card -->
+          <div class="contact-card">
+            <div class="contact-icon-box">📧</div>
+            <div class="contact-label">Email Address</div>
+            <div class="contact-value">koshalsingh0921@gmail.com</div>
+            <button
+              class="copy-btn"
+              data-copy="koshalsingh0921@gmail.com"
+              data-label="Email"
+              aria-label="Copy Email"
+            >
+              <span>Copy Email</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Phone Card -->
+          <div class="contact-card">
+            <div class="contact-icon-box">📱</div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">+91 8210004520</div>
+            <button
+              class="copy-btn"
+              data-copy="+918210004520"
+              data-label="Phone Number"
+              aria-label="Copy Phone"
+            >
+              <span>Copy Phone</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Location Card -->
+          <div class="contact-card">
+            <div class="contact-icon-box">📍</div>
+            <div class="contact-label">Current Location</div>
+            <div class="contact-value">Ahmedabad, India</div>
+            <a
+              href="https://www.linkedin.com/in/koshalsingh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="copy-btn"
+              style="text-decoration: none"
+            >
+              <span>View LinkedIn</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17l9.2-9.2M17 17V7H7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Download & Outreach CTA -->
+        <div class="contact-cta-bar">
+          <h3 class="cta-title">Looking for an experienced Data Scientist?</h3>
+          <p class="cta-desc">
+            Download my latest verified resume or reach out directly to discuss data-driven growth, price optimization, and predictive AI solutions.
+          </p>
+          <div class="cta-actions">
+            <a
+              href="./assets/Koshal%20Kumar%20Resume%20Latest.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              id="contact-download-resume-btn"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Latest Resume (PDF)</span>
+            </a>
+            <a
+              href="mailto:koshalsingh0921@gmail.com"
+              class="btn btn-secondary"
+            >
+              <span>Send Direct Email</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
     <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+      <div class="container footer-content">
+        <div class="footer-brand">
+          Koshal Kumar <span class="text-cyan">• Data Scientist</span>
         </div>
-      </nav>
-      <p>Copyright &#169; 2023 Koshal Kumar. All Rights Reserved.</p>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="footer-copy">
+          © 2026 Koshal Kumar. All Rights Reserved.
+        </div>
+      </div>
     </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container">
+      <div class="toast" id="toast">
+        <span class="toast-icon">✓</span>
+        <span id="toast-msg">Copied to clipboard!</span>
+      </div>
+    </div>
+
+    <!-- Script -->
     <script src="script.js"></script>
   </body>
 </html>
