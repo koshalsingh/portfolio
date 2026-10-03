@@ -1,7 +1,6 @@
 /**
  * Koshal Kumar - Portfolio Interactive Scripts
  */
-
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initSkillsFilter();
