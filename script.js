@@ -2,12 +2,14 @@
  * Koshal Kumar - Portfolio Interactive Scripts
  */
 
+
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initSkillsFilter();
   initCopyActions();
   initScrollEffects();
 });
+
 
 /* Navigation & Mobile Drawer */
 function initNavigation() {
