@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initSkillsFilter();
+  initCertsFilter();
   initCopyActions();
   initScrollEffects();
 });
@@ -111,6 +112,33 @@ function initSkillsFilter() {
         if (filterValue === 'all' || category === filterValue) {
           card.style.display = 'block';
           card.style.animation = 'fadeIn 0.4s ease forwards';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+/* Certifications Category Filtering */
+function initCertsFilter() {
+  const filterBtns = document.querySelectorAll('.cert-filter-btn');
+  const certCards = document.querySelectorAll('.edu-card-cert');
+
+  if (!filterBtns.length || !certCards.length) return;
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-cert-filter');
+
+      certCards.forEach((card) => {
+        const category = card.getAttribute('data-cert-category');
+        if (filterValue === 'all' || category === filterValue) {
+          card.style.display = 'flex';
+          card.style.animation = 'fadeIn 0.35s ease forwards';
         } else {
           card.style.display = 'none';
         }

@@ -45,6 +45,7 @@ st.markdown("""
     <a href='#about'>About</a>
     <a href='#experience'>Experience</a>
     <a href='#projects'>Projects</a>
+    <a href='#education'>Education & Certifications</a>
     <a href='#contact'>Contact</a>
 </nav>
 <hr>
@@ -102,6 +103,35 @@ with st.expander("Intelligent Document Retrieval & RAG Pipeline"):
 with st.expander("Duplicate Question Detection - Quora"):
     st.write("• Built a model to identify duplicate questions on Quora, improving answer efficiency.")
     st.write("• Achieved 98% accuracy, reducing redundancy in Quora’s question database.")
+
+st.markdown("---")
+
+# Education & Certifications Section
+st.markdown("<h1 id='education' class='title'>Education & Certifications</h1>", unsafe_allow_html=True)
+st.subheader("🎓 Academic Degrees")
+st.write("**Master in Data Science & Big Data** - Central University of Rajasthan (2019 – 2021)")
+st.write("**Bachelor of Science in Computer Science** - Magadh University (2016 – 2019)")
+
+st.subheader("📜 Professional & Technical Certifications")
+with st.expander("Deep Learning & AI"):
+    st.write("• **Neural Networks and Deep Learning** - DeepLearning.AI / Coursera (Mar 2020)")
+    st.write("• **Improving Deep Neural Networks: Hyperparameter Tuning, Regularization & Optimization** - DeepLearning.AI / Coursera (May 2020)")
+    st.write("• **Convolutional Neural Networks in TensorFlow** - DeepLearning.AI / Coursera (May 2020)")
+    st.write("• **Introduction to TensorFlow for AI, Machine Learning, and Deep Learning** - DeepLearning.AI / Coursera (Mar 2020)")
+    st.write("• **Natural Language Processing in TensorFlow** - DeepLearning.AI / Coursera (Jun 2020)")
+    st.write("• **Applied NLP** - NPTEL (Dec 2020)")
+    st.write("• **Deep Learning** - NPTEL (2020)")
+
+with st.expander("Machine Learning & Data Science"):
+    st.write("• **Applied Machine Learning in Python** - University of Michigan / Coursera (Mar 2020)")
+    st.write("• **Introduction to Data Science in Python** - University of Michigan / Coursera (Mar 2020)")
+    st.write("• **Machine Learning with Python: Build Real-World ML Models** - IBM / Coursera (Feb 2020)")
+    st.write("• **Data Visualization with Python: Hands-On Projects** - IBM / Coursera (Feb 2020)")
+    st.write("• **Data Structure Certification** - CDAC (Sep 2017)")
+
+with st.expander("Industry & Domain Expertise"):
+    st.write("• **Insurance Domain Certification** - Tiger Analytics (Oct 2023)")
+    st.write("• **CPG Domain Certification** - Tiger Analytics (Jan 2023)")
 
 st.markdown("---")
 
